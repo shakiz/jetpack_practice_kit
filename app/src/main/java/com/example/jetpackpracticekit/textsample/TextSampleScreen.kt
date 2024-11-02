@@ -16,7 +16,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun InputComponentsExample() {
+fun TextSampleScreen() {
     val context = LocalContext.current
 
     // State variables for input values
