@@ -56,6 +56,7 @@ fun MainScreen(navController: NavController) {
         verticalArrangement = Arrangement.spacedBy(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        MyAppBar(title = "Jetpack UI Practice Kit", onBackPressed = { navController.popBackStack() })
         Button(onClick = { navController.navigate("textFieldsScreen") }) {
             Text("Go to Text Fields Screen")
         }
