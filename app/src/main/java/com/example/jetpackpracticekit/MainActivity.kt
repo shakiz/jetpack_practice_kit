@@ -20,6 +20,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.jetpackpracticekit.buttonexample.ButtonExampleScreen
 import com.example.jetpackpracticekit.contextualinfosample.ContextualInfoScreen
 import com.example.jetpackpracticekit.mediaandloadingsample.MediaAndLoadingScreen
+import com.example.jetpackpracticekit.richuisample.RichUILayoutScreen
 import com.example.jetpackpracticekit.textsample.TextSampleScreen
 import com.example.jetpackpracticekit.typographysample.TypographySampleScreen
 
@@ -42,6 +43,7 @@ fun AppNavigation() {
         composable("typographyScreen") { TypographySampleScreen() }
         composable("mediaAndLoadingScreen") { MediaAndLoadingScreen() }
         composable("contextualInfoScreen") { ContextualInfoScreen() }
+        composable("richUILayoutScreen") { RichUILayoutScreen() }
     }
 }
 
@@ -68,6 +70,9 @@ fun MainScreen(navController: NavController) {
         }
         Button(onClick = { navController.navigate("contextualInfoScreen") }) {
             Text("Go to Dialog and Popup Screen")
+        }
+        Button(onClick = { navController.navigate("richUILayoutScreen") }) {
+            Text("Go to Rich UI Screen")
         }
     }
 }
