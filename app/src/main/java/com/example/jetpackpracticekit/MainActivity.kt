@@ -19,6 +19,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.jetpackpracticekit.buttonexample.ButtonExampleScreen
 import com.example.jetpackpracticekit.textsample.TextSampleScreen
+import com.example.jetpackpracticekit.typographysample.TypographySampleScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,6 +37,7 @@ fun AppNavigation() {
         composable("mainScreen") { MainScreen(navController) }
         composable("textFieldsScreen") { TextSampleScreen() }
         composable("buttonScreen") { ButtonExampleScreen() }
+        composable("typographyScreen") { TypographySampleScreen() }
     }
 }
 
@@ -52,7 +54,10 @@ fun MainScreen(navController: NavController) {
             Text("Go to Text Fields Screen")
         }
         Button(onClick = { navController.navigate("buttonScreen") }) {
-            Text("Go to Checkbox Screen")
+            Text("Go to Button Screen")
+        }
+        Button(onClick = { navController.navigate("typographyScreen") }) {
+            Text("Go to Typography Screen")
         }
     }
 }
