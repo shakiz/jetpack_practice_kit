@@ -18,6 +18,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.jetpackpracticekit.buttonexample.ButtonExampleScreen
+import com.example.jetpackpracticekit.mediaandloadingsample.MediaAndLoadingScreen
 import com.example.jetpackpracticekit.textsample.TextSampleScreen
 import com.example.jetpackpracticekit.typographysample.TypographySampleScreen
 
@@ -38,6 +39,7 @@ fun AppNavigation() {
         composable("textFieldsScreen") { TextSampleScreen() }
         composable("buttonScreen") { ButtonExampleScreen() }
         composable("typographyScreen") { TypographySampleScreen() }
+        composable("mediaAndLoadingScreen") { MediaAndLoadingScreen() }
     }
 }
 
@@ -58,6 +60,9 @@ fun MainScreen(navController: NavController) {
         }
         Button(onClick = { navController.navigate("typographyScreen") }) {
             Text("Go to Typography Screen")
+        }
+        Button(onClick = { navController.navigate("mediaAndLoadingScreen") }) {
+            Text("Go to Media and Loading Screen")
         }
     }
 }
