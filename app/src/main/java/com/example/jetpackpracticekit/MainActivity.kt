@@ -19,6 +19,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.jetpackpracticekit.buttonexample.ButtonExampleScreen
 import com.example.jetpackpracticekit.contextualinfosample.ContextualInfoScreen
+import com.example.jetpackpracticekit.layoutsample.LayoutSampleScreen
 import com.example.jetpackpracticekit.mediaandloadingsample.MediaAndLoadingScreen
 import com.example.jetpackpracticekit.richuisample.RichUILayoutScreen
 import com.example.jetpackpracticekit.textsample.TextSampleScreen
@@ -38,6 +39,7 @@ fun AppNavigation() {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "mainScreen") {
         composable("mainScreen") { MainScreen(navController) }
+        composable("layoutSampleScreen") { LayoutSampleScreen() }
         composable("textFieldsScreen") { TextSampleScreen() }
         composable("buttonScreen") { ButtonExampleScreen() }
         composable("typographyScreen") { TypographySampleScreen() }
@@ -57,6 +59,9 @@ fun MainScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         MyAppBar(title = "Jetpack UI Practice Kit", onBackPressed = { navController.popBackStack() })
+        Button(onClick = { navController.navigate("layoutSampleScreen") }) {
+            Text("Go to Layouts Screen")
+        }
         Button(onClick = { navController.navigate("textFieldsScreen") }) {
             Text("Go to Text Fields Screen")
         }
