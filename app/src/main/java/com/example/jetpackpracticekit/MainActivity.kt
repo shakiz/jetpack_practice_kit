@@ -21,6 +21,7 @@ import com.example.jetpackpracticekit.ui.buttonexample.ButtonExampleScreen
 import com.example.jetpackpracticekit.ui.contextualinfosample.ContextualInfoScreen
 import com.example.jetpackpracticekit.ui.layoutsample.LayoutSampleScreen
 import com.example.jetpackpracticekit.ui.mediaandloadingsample.MediaAndLoadingScreen
+import com.example.jetpackpracticekit.ui.mvvm.MVVMSampleScreen
 import com.example.jetpackpracticekit.ui.richuisample.RichUILayoutScreen
 import com.example.jetpackpracticekit.ui.textsample.TextSampleScreen
 import com.example.jetpackpracticekit.ui.typographysample.TypographySampleScreen
@@ -46,6 +47,7 @@ fun AppNavigation() {
         composable("mediaAndLoadingScreen") { MediaAndLoadingScreen() }
         composable("contextualInfoScreen") { ContextualInfoScreen() }
         composable("richUILayoutScreen") { RichUILayoutScreen() }
+        composable("mVVMSampleScreen") { MVVMSampleScreen() }
     }
 }
 
@@ -79,6 +81,9 @@ fun MainScreen(navController: NavController) {
         }
         Button(onClick = { navController.navigate("richUILayoutScreen") }) {
             Text("Go to Rich UI Screen")
+        }
+        Button(onClick = { navController.navigate("mVVMSampleScreen") }) {
+            Text("Go to MVVM Screen")
         }
     }
 }
