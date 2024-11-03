@@ -1,4 +1,4 @@
-package com.example.jetpackpracticekit.richuisample
+package com.example.jetpackpracticekit.ui.richuisample
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

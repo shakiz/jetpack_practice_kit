@@ -1,4 +1,4 @@
-package com.example.jetpackpracticekit.buttonexample
+package com.example.jetpackpracticekit.ui.buttonexample
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement

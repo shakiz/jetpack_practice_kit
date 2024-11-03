@@ -1,4 +1,4 @@
-package com.example.jetpackpracticekit.contextualinfosample
+package com.example.jetpackpracticekit.ui.contextualinfosample
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*

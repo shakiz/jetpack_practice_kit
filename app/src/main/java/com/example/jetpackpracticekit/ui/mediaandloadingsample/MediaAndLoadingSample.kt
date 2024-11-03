@@ -1,4 +1,4 @@
-package com.example.jetpackpracticekit.mediaandloadingsample
+package com.example.jetpackpracticekit.ui.mediaandloadingsample
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*

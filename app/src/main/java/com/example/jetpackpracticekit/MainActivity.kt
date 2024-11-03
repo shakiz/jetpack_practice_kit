@@ -17,13 +17,13 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.jetpackpracticekit.buttonexample.ButtonExampleScreen
-import com.example.jetpackpracticekit.contextualinfosample.ContextualInfoScreen
-import com.example.jetpackpracticekit.layoutsample.LayoutSampleScreen
-import com.example.jetpackpracticekit.mediaandloadingsample.MediaAndLoadingScreen
-import com.example.jetpackpracticekit.richuisample.RichUILayoutScreen
-import com.example.jetpackpracticekit.textsample.TextSampleScreen
-import com.example.jetpackpracticekit.typographysample.TypographySampleScreen
+import com.example.jetpackpracticekit.ui.buttonexample.ButtonExampleScreen
+import com.example.jetpackpracticekit.ui.contextualinfosample.ContextualInfoScreen
+import com.example.jetpackpracticekit.ui.layoutsample.LayoutSampleScreen
+import com.example.jetpackpracticekit.ui.mediaandloadingsample.MediaAndLoadingScreen
+import com.example.jetpackpracticekit.ui.richuisample.RichUILayoutScreen
+import com.example.jetpackpracticekit.ui.textsample.TextSampleScreen
+import com.example.jetpackpracticekit.ui.typographysample.TypographySampleScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

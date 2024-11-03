@@ -1,4 +1,4 @@
-package com.example.jetpackpracticekit.textsample
+package com.example.jetpackpracticekit.ui.textsample
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.*

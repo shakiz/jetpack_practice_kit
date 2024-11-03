@@ -1,4 +1,4 @@
-package com.example.jetpackpracticekit.typographysample
+package com.example.jetpackpracticekit.ui.typographysample
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*

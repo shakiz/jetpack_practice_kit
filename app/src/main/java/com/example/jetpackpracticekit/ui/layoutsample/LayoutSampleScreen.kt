@@ -1,4 +1,4 @@
-package com.example.jetpackpracticekit.layoutsample
+package com.example.jetpackpracticekit.ui.layoutsample
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
