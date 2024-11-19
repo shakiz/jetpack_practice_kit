@@ -17,6 +17,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.jetpackpracticekit.ui.bottomnavsample.BottomNavSampleScreen
 import com.example.jetpackpracticekit.ui.buttonexample.ButtonExampleScreen
 import com.example.jetpackpracticekit.ui.contextualinfosample.ContextualInfoScreen
 import com.example.jetpackpracticekit.ui.layoutsample.LayoutSampleScreen
@@ -48,6 +49,7 @@ fun AppNavigation() {
         composable("contextualInfoScreen") { ContextualInfoScreen() }
         composable("richUILayoutScreen") { RichUILayoutScreen() }
         composable("mVVMSampleScreen") { MVVMSampleScreen() }
+        composable("bottomNavigationComponent") { BottomNavSampleScreen() }
     }
 }
 
@@ -84,6 +86,9 @@ fun MainScreen(navController: NavController) {
         }
         Button(onClick = { navController.navigate("mVVMSampleScreen") }) {
             Text("Go to MVVM Screen")
+        }
+        Button(onClick = { navController.navigate("bottomNavigationComponent") }) {
+            Text("Go to Bottom Nav Sample Screen")
         }
     }
 }
