@@ -11,6 +11,12 @@ import androidx.navigation.compose.rememberNavController
 
 data class BottomNavItem(val name: String, val route: String, val icon: ImageVector)
 
+enum class AppRouteConstants{
+    HOME,
+    PROFILE,
+    SETTINGS
+}
+
 @Composable
 fun BottomNavSampleScreen() {
     val navController = rememberNavController()
@@ -18,17 +24,17 @@ fun BottomNavSampleScreen() {
     val bottomNavItems = listOf(
         BottomNavItem(
             name = "Home",
-            route = "home",
+            route = AppRouteConstants.HOME.name,
             icon = Icons.Default.Home
         ),
         BottomNavItem(
             name = "Profile",
-            route = "profile",
+            route = AppRouteConstants.PROFILE.name,
             icon = Icons.Default.Person
         ),
         BottomNavItem(
             name = "Settings",
-            route = "settings",
+            route = AppRouteConstants.SETTINGS.name,
             icon = Icons.Default.Settings
         ),
     )

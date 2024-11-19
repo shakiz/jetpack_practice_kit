@@ -12,8 +12,8 @@ import com.example.jetpackpracticekit.ui.bottomnavsample.screens.SettingScreen
 @Composable
 fun MainNavigationConfigurations(navController: NavHostController, contentPadding: PaddingValues) {
     NavHost(navController, startDestination = "home") {
-        composable("home") { HomeScreen() }
-        composable("profile") { ProfileScreen() }
-        composable("settings") { SettingScreen() }
+        composable(AppRouteConstants.HOME.name) { HomeScreen() }
+        composable(AppRouteConstants.PROFILE.name) { ProfileScreen() }
+        composable(AppRouteConstants.SETTINGS.name) { SettingScreen() }
     }
 }

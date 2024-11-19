@@ -26,7 +26,9 @@ fun BottomNavigationBar(navController: NavController, bottomNavItems: List<Botto
                 },
                 selected = currentRoute == it.route,
                 onClick = {
-                    navController.navigate(it.route)
+                    if (currentRoute != it.route){
+                        navController.navigate(it.route)
+                    }
                 },
                 colors = NavigationBarItemDefaults.colors(
                     unselectedTextColor = Color.Gray,
