@@ -12,10 +12,18 @@ import com.example.jetpackpracticekit.ui.bottomnavsample.bottomnavscreens.Profil
 import com.example.jetpackpracticekit.ui.bottomnavsample.bottomnavscreens.SettingScreen
 
 @Composable
-fun MainNavigationConfigurations(navController: NavHostController, contentPadding: PaddingValues) {
+fun MainNavigationConfigurations(
+    navController: NavHostController,
+    contentPadding: PaddingValues,
+    onProductClicked: () -> Unit,
+) {
     NavHost(navController, startDestination = "home", modifier = Modifier.padding(contentPadding)) {
-        composable(AppRouteConstants.HOME.name) { HomeScreen() }
-        composable(AppRouteConstants.PROFILE.name) { ProfileScreen() }
-        composable(AppRouteConstants.SETTINGS.name) { SettingScreen() }
+        composable(BottomNavRoutes.HOME.name) {
+            HomeScreen() {
+                onProductClicked()
+            }
+        }
+        composable(BottomNavRoutes.PROFILE.name) { ProfileScreen() }
+        composable(BottomNavRoutes.SETTINGS.name) { SettingScreen() }
     }
 }
