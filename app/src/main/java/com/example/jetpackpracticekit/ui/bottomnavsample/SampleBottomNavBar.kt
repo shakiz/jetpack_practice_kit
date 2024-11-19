@@ -6,13 +6,17 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavController
+import androidx.navigation.compose.currentBackStackEntryAsState
 
 @Composable
 fun BottomNavigationBar(navController: NavController, bottomNavItems: List<BottomNavItem>) {
     NavigationBar {
-        val currentRoute = navController.currentBackStackEntry?.destination?.route
+        val navBackStackEntry by navController.currentBackStackEntryAsState()
+        val currentDestination = navBackStackEntry?.destination
+
         bottomNavItems.forEach {
             NavigationBarItem(
                 label = {
@@ -24,9 +28,9 @@ fun BottomNavigationBar(navController: NavController, bottomNavItems: List<Botto
                         contentDescription = ""
                     )
                 },
-                selected = currentRoute == it.route,
+                selected = currentDestination?.route == it.route,
                 onClick = {
-                    if (currentRoute != it.route){
+                    if (currentDestination?.route != it.route){
                         navController.navigate(it.route)
                     }
                 },
@@ -34,8 +38,8 @@ fun BottomNavigationBar(navController: NavController, bottomNavItems: List<Botto
                     unselectedTextColor = Color.Gray,
                     selectedTextColor = Color.Black,
                     selectedIconColor = Color.Black,
-                    unselectedIconColor = Color.Black,
-                    indicatorColor = Color.White
+                    unselectedIconColor = Color.Gray,
+                    indicatorColor = Color.Green,
                 ),
             )
         }
