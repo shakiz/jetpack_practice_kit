@@ -1,4 +1,4 @@
-package com.example.jetpackpracticekit.ui.bottomnavsample.screens
+package com.example.jetpackpracticekit.ui.bottomnavsample.bottomnavscreens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -9,12 +9,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
-fun ProfileScreen() {
+fun SettingScreen() {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Profile Screen")
+        Text("Settings Screen")
     }
 }

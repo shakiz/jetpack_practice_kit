@@ -14,7 +14,7 @@ data class BottomNavItem(val name: String, val route: String, val icon: ImageVec
 enum class AppRouteConstants{
     HOME,
     PROFILE,
-    SETTINGS
+    SETTINGS,
 }
 
 @Composable
