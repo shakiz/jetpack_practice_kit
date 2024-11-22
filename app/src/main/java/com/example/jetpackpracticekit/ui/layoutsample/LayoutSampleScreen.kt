@@ -1,5 +1,6 @@
 package com.example.jetpackpracticekit.ui.layoutsample
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,7 +23,10 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.constraintlayout.compose.ChainStyle
+import androidx.constraintlayout.compose.ConstraintLayout
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -72,6 +76,92 @@ fun LayoutSampleScreen() {
                             modifier = Modifier.padding(16.dp)
                         )
                     }
+                }
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                ConstraintLayout(
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+
+                    //Basic Constraints
+                    val (text1, text2, text3, text4, text5, text6, text7, box1, box2, box3) = createRefs()
+
+//                    //Guideline
+//                    val guideline = createGuidelineFromTop(0.5f)
+//                    Text(
+//                        "Text aligned to guideline",
+//                        modifier = Modifier.constrainAs(text1) {
+//                            top.linkTo(guideline)
+//                            start.linkTo(parent.start, margin = 16.dp)
+//                            end.linkTo(parent.end, margin = 16.dp)
+//                        }
+//                    )
+
+                    Text(
+                        "Hello",
+                        modifier = Modifier.constrainAs(text1) {
+                            top.linkTo(parent.top, margin = 16.dp)
+                            start.linkTo(parent.start, margin = 16.dp)
+                            start.linkTo(parent.start, margin = 16.dp)
+                        }
+                    )
+
+                    Text(
+                        "World",
+                        modifier = Modifier.constrainAs(text2) {
+                            top.linkTo(text1.bottom, margin = 8.dp)
+                            start.linkTo(text1.start)
+                        }
+                    )
+
+                    createHorizontalChain(box1, box2, box3, chainStyle = ChainStyle.Spread)
+
+                    Box(modifier = Modifier
+                        .size(50.dp)
+                        .background(Color.Red)
+                        .constrainAs(box1) {
+                            top.linkTo(text2.bottom)
+                        })
+
+                    Box(modifier = Modifier
+                        .size(50.dp)
+                        .background(Color.Green)
+                        .constrainAs(box2) {
+                            top.linkTo(text2.bottom)
+                        })
+
+                    Box(modifier = Modifier
+                        .size(50.dp)
+                        .background(Color.Blue)
+                        .constrainAs(box3) {
+                            top.linkTo(text2.bottom)
+                        })
+
+                    Text(
+                        "Short text",
+                        modifier = Modifier.constrainAs(text3) {
+                            top.linkTo(box1.bottom, margin = 16.dp)
+                            start.linkTo(parent.start, margin = 16.dp)
+                        }
+                    )
+
+                    Text(
+                        "A much longer text",
+                        modifier = Modifier.constrainAs(text4) {
+                            top.linkTo(text3.bottom, margin = 8.dp)
+                            start.linkTo(parent.start, margin = 16.dp)
+                        }
+                    )
+
+                    Text(
+                        "Aligned to Barrier",
+                        modifier = Modifier.constrainAs(text5) {
+                            top.linkTo(text4.bottom, margin = 8.dp)
+                            start.linkTo(parent.start, margin = 16.dp)
+                            end.linkTo(parent.end, margin = 16.dp)
+                        }
+                    )
                 }
 
                 // Spacer to separate sections

@@ -1,4 +1,4 @@
-package com.example.jetpackpracticekit
+package com.example.jetpackpracticekit.ui.main
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.List
