@@ -28,7 +28,7 @@ fun AuthNavGraph() {
                 onBackToLoginClick = { authNavController.popBackStack() })
         }
         composable("UiSamplesNavigation") {
-            UiSamplesNavigation()
+            UiSamplesNavGraph()
         }
     }
 }

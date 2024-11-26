@@ -16,7 +16,7 @@ import com.example.jetpackpracticekit.ui.textsample.TextSampleScreen
 import com.example.jetpackpracticekit.ui.typographysample.TypographySampleScreen
 
 @Composable
-fun UiSamplesNavigation() {
+fun UiSamplesNavGraph() {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "allUISampleScreen") {
         composable("allUISampleScreen") { AllUISampleScreen(navController) }
