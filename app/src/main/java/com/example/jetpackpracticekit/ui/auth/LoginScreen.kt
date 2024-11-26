@@ -20,20 +20,24 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.jetpackpracticekit.utils.PrefManager
 
 @Composable
 fun LoginScreen(
-    authViewModel: AuthViewModel = viewModel(),
     onLoginClick: (String, String) -> Unit,
     onRegisterClick: () -> Unit
 ) {
+    val context = LocalContext.current
+    val preferencesManager = remember { PrefManager(context) }
+    val authViewModel = remember { AuthViewModel(preferencesManager) }
     val authState by authViewModel.uiState.collectAsState()
 
     Box(
@@ -94,7 +98,7 @@ fun LoginScreen(
                 Text("Login")
             }
 
-            // Forgot Password
+            // Register UI
             TextButton(onClick = { onRegisterClick() }) {
                 Text("Register Yourself")
             }

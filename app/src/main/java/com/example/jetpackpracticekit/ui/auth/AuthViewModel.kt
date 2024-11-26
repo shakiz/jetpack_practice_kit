@@ -1,10 +1,13 @@
 package com.example.jetpackpracticekit.ui.auth
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.jetpackpracticekit.utils.PrefManager
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 
 data class AuthState(
     val isLoading: Boolean = false,
@@ -15,13 +18,14 @@ data class AuthState(
     val error: String? = null
 )
 
-class AuthViewModel : ViewModel() {
+class AuthViewModel(private val prefManager: PrefManager) : ViewModel() {
     private val _authState = MutableStateFlow(AuthState())
     val uiState: StateFlow<AuthState> = _authState.asStateFlow()
 
+
     fun setLoginState(isLoggedIn: Boolean) {
-        _authState.update {
-            it.copy(isLogin = isLoggedIn)
+        viewModelScope.launch {
+            prefManager.putBooleanValue("isLoggedIn", isLoggedIn)
         }
     }
 
