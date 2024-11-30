@@ -6,10 +6,6 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.compose.rememberNavController
 
@@ -24,7 +20,7 @@ enum class BottomNavRoutes {
 @Composable
 fun BottomNavSampleScreen() {
     val navController = rememberNavController()
-    var shouldShowBottomBar by remember { mutableStateOf(true) }
+    //var shouldShowBottomBar by remember { mutableStateOf(true) }
 
     val bottomNavItems = listOf(
         BottomNavItem(
@@ -46,13 +42,13 @@ fun BottomNavSampleScreen() {
 
     Scaffold(
         bottomBar = {
-            if (shouldShowBottomBar) {
+            //if (shouldShowBottomBar) {
                 BottomNavigationBar(navController, bottomNavItems)
-            }
+            //}
         }
     ) { contentPadding ->
         MainNavigationConfigurations(navController, contentPadding, {
-            shouldShowBottomBar = false
+            //shouldShowBottomBar = false
         })
     }
 }
