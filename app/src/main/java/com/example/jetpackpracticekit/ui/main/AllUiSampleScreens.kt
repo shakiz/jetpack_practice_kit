@@ -31,7 +31,7 @@ fun AllUISampleScreen(navController: NavController) {
             verticalArrangement = Arrangement.spacedBy(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Spacer(modifier = Modifier.height(1.dp))
+            Spacer(modifier = Modifier.height(8.dp))
             Button(onClick = { navController.navigate("layoutSampleScreen") }) {
                 Text("Go to Layouts Screen")
             }

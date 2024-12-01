@@ -20,14 +20,14 @@ fun UiSamplesNavGraph() {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "allUISampleScreen") {
         composable("allUISampleScreen") { AllUISampleScreen(navController) }
-        composable("layoutSampleScreen") { LayoutSampleScreen() }
-        composable("textFieldsScreen") { TextSampleScreen() }
-        composable("buttonScreen") { ButtonExampleScreen() }
-        composable("typographyScreen") { TypographySampleScreen() }
-        composable("mediaAndLoadingScreen") { MediaAndLoadingScreen() }
-        composable("contextualInfoScreen") { ContextualInfoScreen() }
-        composable("richUILayoutScreen") { RichUILayoutScreen() }
-        composable("mVVMSampleScreen") { MVVMSampleScreen() }
+        composable("layoutSampleScreen") { LayoutSampleScreen(navController) }
+        composable("textFieldsScreen") { TextSampleScreen(navController) }
+        composable("buttonScreen") { ButtonExampleScreen(navController) }
+        composable("typographyScreen") { TypographySampleScreen(navController) }
+        composable("mediaAndLoadingScreen") { MediaAndLoadingScreen(navController) }
+        composable("contextualInfoScreen") { ContextualInfoScreen(navController) }
+        composable("richUILayoutScreen") { RichUILayoutScreen(navController) }
+        composable("mVVMSampleScreen") { MVVMSampleScreen(navController) }
         composable("bottomNavigationComponent") { BottomNavSampleScreen() }
     }
 }

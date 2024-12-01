@@ -19,12 +19,19 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import com.example.jetpackpracticekit.ui.main.MyAppBar
 
 @Composable
-fun ButtonExampleScreen() {
+fun ButtonExampleScreen(navController: NavController) {
     val context = LocalContext.current
 
     Scaffold(
+        topBar = {
+            MyAppBar(
+                title = "Jetpack UI Practice Kit",
+                onBackPressed = { navController.popBackStack() })
+        },
         floatingActionButton = {
             FloatingActionButton(onClick = {
                 Toast.makeText(context, "FloatingActionButton clicked", Toast.LENGTH_SHORT).show()

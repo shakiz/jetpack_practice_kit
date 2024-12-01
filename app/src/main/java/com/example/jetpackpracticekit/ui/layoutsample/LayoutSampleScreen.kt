@@ -16,10 +16,8 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -27,13 +25,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ChainStyle
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.navigation.NavController
+import com.example.jetpackpracticekit.ui.main.MyAppBar
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LayoutSampleScreen() {
+fun LayoutSampleScreen(navController: NavController) {
     Scaffold(
         topBar = {
-            TopAppBar(title = { Text("My Layout Example") })
+            MyAppBar(
+                title = "Jetpack UI Practice Kit",
+                onBackPressed = { navController.popBackStack() })
         },
         content = { paddingValues ->
             Column(

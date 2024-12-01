@@ -8,6 +8,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.compose.rememberNavController
+import com.example.jetpackpracticekit.ui.main.MyAppBar
 
 data class BottomNavItem(val name: String, val route: String, val icon: ImageVector)
 
@@ -41,6 +42,11 @@ fun BottomNavSampleScreen() {
     )
 
     Scaffold(
+        topBar = {
+            MyAppBar(
+                title = "Jetpack UI Practice Kit",
+                onBackPressed = { navController.popBackStack() })
+        },
         bottomBar = {
             //if (shouldShowBottomBar) {
                 BottomNavigationBar(navController, bottomNavItems)
