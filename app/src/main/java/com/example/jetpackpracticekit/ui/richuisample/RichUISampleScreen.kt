@@ -10,6 +10,8 @@ import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -27,7 +29,8 @@ fun RichUILayoutScreen(navController: NavController) {
     Scaffold(
         topBar = {
             MyAppBar(
-                title = "Jetpack UI Practice Kit",
+                title = "Rich UI Sample",
+                Icons.Filled.ArrowBack,
                 onBackPressed = { navController.popBackStack() })
         }
     ) { innerPadding ->

@@ -1,7 +1,9 @@
 package com.example.jetpackpracticekit.ui.bottomnavsample
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Scaffold
@@ -44,7 +46,8 @@ fun BottomNavSampleScreen() {
     Scaffold(
         topBar = {
             MyAppBar(
-                title = "Jetpack UI Practice Kit",
+                title = "Bottom Navigation Sample",
+                Icons.Filled.ArrowBack,
                 onBackPressed = { navController.popBackStack() })
         },
         bottomBar = {

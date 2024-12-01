@@ -14,6 +14,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.Scaffold
@@ -33,7 +35,8 @@ fun LayoutSampleScreen(navController: NavController) {
     Scaffold(
         topBar = {
             MyAppBar(
-                title = "Jetpack UI Practice Kit",
+                title = "Layout Sample Screen",
+                Icons.Filled.ArrowBack,
                 onBackPressed = { navController.popBackStack() })
         },
         content = { paddingValues ->

@@ -1,6 +1,8 @@
 package com.example.jetpackpracticekit.ui.contextualinfosample
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -19,7 +21,8 @@ fun ContextualInfoScreen(navController: NavController) {
     Scaffold(
         topBar = {
             MyAppBar(
-                title = "Jetpack UI Practice Kit",
+                title = "Extensive Ui Samples",
+                Icons.Filled.ArrowBack,
                 onBackPressed = { navController.popBackStack() })
         }
     ) { innerPadding ->

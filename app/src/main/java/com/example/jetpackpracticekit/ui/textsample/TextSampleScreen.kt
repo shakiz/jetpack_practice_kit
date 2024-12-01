@@ -2,6 +2,8 @@ package com.example.jetpackpracticekit.ui.textsample
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
@@ -34,7 +36,8 @@ fun TextSampleScreen(navController: NavController) {
     Scaffold(
         topBar = {
             MyAppBar(
-                title = "Jetpack UI Practice Kit",
+                title = "Texts Sample Screen",
+                Icons.Filled.ArrowBack,
                 onBackPressed = { navController.popBackStack() })
         }
     ) { innerPadding ->

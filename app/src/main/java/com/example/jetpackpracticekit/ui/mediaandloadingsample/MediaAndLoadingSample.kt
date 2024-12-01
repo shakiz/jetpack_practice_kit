@@ -3,6 +3,7 @@ package com.example.jetpackpracticekit.ui.mediaandloadingsample
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -22,7 +23,8 @@ fun MediaAndLoadingScreen(navController: NavController) {
 
     Scaffold(topBar = {
         MyAppBar(
-            title = "Jetpack UI Practice Kit",
+            title = "Media and Loading Sample",
+            Icons.Filled.ArrowBack,
             onBackPressed = { navController.popBackStack() })
     }) { innerPadding ->
         Column(

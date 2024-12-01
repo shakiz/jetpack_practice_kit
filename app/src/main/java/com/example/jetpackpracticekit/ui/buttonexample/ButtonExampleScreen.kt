@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material3.Button
 import androidx.compose.material3.FloatingActionButton
@@ -29,7 +30,8 @@ fun ButtonExampleScreen(navController: NavController) {
     Scaffold(
         topBar = {
             MyAppBar(
-                title = "Jetpack UI Practice Kit",
+                title = "Button Sample",
+                Icons.Filled.ArrowBack,
                 onBackPressed = { navController.popBackStack() })
         },
         floatingActionButton = {
