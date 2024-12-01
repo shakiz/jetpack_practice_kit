@@ -8,6 +8,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
 import com.example.jetpackpracticekit.ui.navgraphs.AuthNavGraph
 import com.example.jetpackpracticekit.ui.navgraphs.UiSamplesNavGraph
+import com.example.jetpackpracticekit.ui.theme.JetPackPracticeKitTheme
 import com.example.jetpackpracticekit.utils.PrefManager
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -26,11 +27,15 @@ class MainActivity : ComponentActivity() {
             val isLoggedIn = preferencesManager.getBooleanValue("isLoggedIn", false)
             if (isLoggedIn) {
                 setContent {
-                    UiSamplesNavGraph()
+                    JetPackPracticeKitTheme {
+                        UiSamplesNavGraph()
+                    }
                 }
             } else {
                 setContent {
-                    AuthNavGraph()
+                    JetPackPracticeKitTheme {
+                        AuthNavGraph()
+                    }
                 }
             }
         }
