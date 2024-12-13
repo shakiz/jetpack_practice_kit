@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
@@ -59,6 +58,9 @@ fun AllUISampleScreen(navController: NavController) {
             }
             Button(onClick = { navController.navigate("mVVMSampleScreen") }) {
                 Text("Go to MVVM Screen")
+            }
+            Button(onClick = { navController.navigate("imageLoading") }) {
+                Text("Go to Image Loading Library Sample")
             }
             Button(onClick = { navController.navigate("bottomNavigationComponent") }) {
                 Text("Go to Bottom Nav Sample Screen")
