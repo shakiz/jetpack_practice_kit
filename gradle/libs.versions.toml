@@ -1,6 +1,7 @@
 [versions]
 agp = "8.4.0"
 androidxNavigationCompose = "2.4.0-alpha01"
+coilCompose = "3.0.4"
 coreSplashscreen = "1.0.1"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
@@ -29,6 +30,8 @@ androidx-navigation-compose-v284 = { module = "androidx.navigation:navigation-co
 androidx-navigation-dynamic-features-fragment = { module = "androidx.navigation:navigation-dynamic-features-fragment", version.ref = "navigationComposeVersion" }
 androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragment", version.ref = "navigationFragment" }
 androidx-navigation-ui = { module = "androidx.navigation:navigation-ui", version.ref = "navigationComposeVersion" }
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilCompose" }
+coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coilCompose" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
