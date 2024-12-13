@@ -7,6 +7,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.jetpackpracticekit.ui.bottomnavsample.BottomNavSampleScreen
 import com.example.jetpackpracticekit.ui.buttonexample.ButtonExampleScreen
 import com.example.jetpackpracticekit.ui.contextualinfosample.ContextualInfoScreen
+import com.example.jetpackpracticekit.ui.imageloading.ImageLoadingSampleScreen
 import com.example.jetpackpracticekit.ui.layoutsample.LayoutSampleScreen
 import com.example.jetpackpracticekit.ui.main.AllUISampleScreen
 import com.example.jetpackpracticekit.ui.mediaandloadingsample.MediaAndLoadingScreen
@@ -28,6 +29,7 @@ fun UiSamplesNavGraph() {
         composable("contextualInfoScreen") { ContextualInfoScreen(navController) }
         composable("richUILayoutScreen") { RichUILayoutScreen(navController) }
         composable("mVVMSampleScreen") { MVVMSampleScreen(navController) }
+        composable("imageLoading") { ImageLoadingSampleScreen(navController) }
         composable("bottomNavigationComponent") { BottomNavSampleScreen() }
     }
 }
